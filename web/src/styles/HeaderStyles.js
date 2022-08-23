@@ -25,10 +25,11 @@ export default styled.header`
         &:hover {
           a {
             background: var(--black-2);
+            color: var(--white-1);
           }
         }
         a {
-          color: var(--white-1);
+          color: var(--black-2);
           display: inline-block;
           text-decoration: none;
           font-size: 1.6rem;
@@ -49,6 +50,7 @@ export default styled.header`
       align-items: center;
       justify-content: center;
       background-color: var(--black-2);
+      color: var(--white);
     }
   }
   .mobileMenuCloseBtn,
@@ -72,7 +74,7 @@ export default styled.header`
         right: 0;
         width: 80%;
         transform: translateX(100%);
-        background-color: var(--black-2);
+        background-color: var(--black);
         height: 100vh;
         display: flex;
         align-items: center;
@@ -88,12 +90,14 @@ export default styled.header`
             &:hover {
               a {
                 background: var(--black-1);
+                color: var(--black)                
               }
             }
             a {
               width: 100%;
               padding: 0.5rem 1rem;
               border-radius: 4px;
+              color: var(--white);
             }
             &.searchIcon {
               display: none;
