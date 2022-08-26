@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SearchModalStyles = styled.div`
   position: fixed;
@@ -11,10 +11,10 @@ export const SearchModalStyles = styled.div`
     left: 50%;
     transform: translateX(-50%);
     top: 100px;
-    max-height: calc(100% - 150px);
+    max-height: calc(100% - 100px);
     width: 90%;
     max-width: 500px;
-    background-color: var(--black-1);
+    background-color: var(--black-2);
     padding: 2rem;
     border-radius: 4px;
     display: flex;
