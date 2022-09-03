@@ -34,17 +34,21 @@ export const EventsQuery = graphql`
 `;
 
 function EventsList({ data, pageContext }) {
-  const events = data.allSanityEvents.nodes;
+  const eventsMain = data.allSanityEvents.nodes;
 
   console.log(events.publishedAt);
   const { currentPage, numberOfPages } = pageContext;
 
   const currentTime = new Date();
-  const now = new Date(currentTime).toISOString();
+  /*const now = new Date(currentTime).toISOString();
   const d1 = (element) => {
     new Date(element).toISOString();
-  };
-
+  };*/
+const checkIsCurrent=(event)=>{
+let date = new Date(Date.parse(event.publishedAt));
+return date>=currentTime;
+}
+const events = eventsMain.filter(checkIsCurrent);
   return (
     <PageSpace top={80} bottom={100}>
       <SEO title="Events" />
@@ -54,7 +58,7 @@ function EventsList({ data, pageContext }) {
           description="Checkout this page regularly to be notified of any upcoming event that we are organizing!"
         />
         <div>
-          {events.PublishedAt === new Date() ? (
+          {events.length>0 ? (
             events.forEach(({ id }) => <BlogGrid blogs={events} key={id} />)
           ) : (
             <ParagraphText>
