@@ -4,8 +4,8 @@
     "name": "healthGuru-blog"
   },
   "api": {
-    "projectId": "",
-    "dataset": ""
+    "projectId": "vzuexbco",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

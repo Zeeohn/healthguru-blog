@@ -1,12 +1,12 @@
-import React, { useState, useContext } from "react";
-import HeaderStyles from "./../styles/HeaderStyles";
-import { SearchModalContext } from "./../context/SearchModalContext";
-import { Link } from "gatsby";
-import { menu } from "./../constants/menu";
-import { MdSearch, MdMenu, MdClose } from "react-icons/md";
-import Logo from "./Logo";
-import clsx from "clsx";
-import ActionButton from "./buttons/ActionButton";
+import React, { useState, useContext } from 'react';
+import { Link } from 'gatsby';
+import { MdSearch, MdMenu, MdClose } from 'react-icons/md';
+import clsx from 'clsx';
+import HeaderStyles from '../styles/HeaderStyles';
+import { SearchModalContext } from '../context/SearchModalContext';
+import { menu } from '../constants/menu';
+import Logo from './Logo';
+import ActionButton from './buttons/ActionButton';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -29,7 +29,7 @@ function Header() {
           <div className="logo">
             <Logo />
           </div>
-          <div className={clsx("nav__wrapper", isNavOpen && "open")}>
+          <div className={clsx('nav__wrapper', isNavOpen && 'open')}>
             <div className="mobileIcon">
               <div className="searchIcon">
                 <div
@@ -58,7 +58,7 @@ function Header() {
                 tabIndex={0}
                 onClick={() => setIsNavOpen(false)}
                 onKeyDown={() => setIsNavOpen(false)}
-              ></div>
+              />
             )}
             <nav>
               <ActionButton

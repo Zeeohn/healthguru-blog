@@ -1,10 +1,10 @@
-import React from "react";
-import { FooterStyles } from "./../styles/FooterStyles";
-import Logo from "./Logo";
-import ParagraphText from "./typography/ParagraphText";
-import { menu } from "./../constants/menu";
-import { Link } from "gatsby";
-import { SocialLinks } from "./../constants/SocialLinks";
+import React from 'react';
+import { Link } from 'gatsby';
+import { FooterStyles } from '../styles/FooterStyles';
+import Logo from './Logo';
+import ParagraphText from './typography/ParagraphText';
+import { menu } from '../constants/menu';
+import { SocialLinks } from '../constants/SocialLinks';
 
 function Footer() {
   return (
@@ -30,9 +30,9 @@ function Footer() {
           ))}
         </ul>
         <ParagraphText className="copyright">
-          Made with <span style={{ color: "red" }}>❤</span> by{" "}
-          <a href={"https://www.wa.me/2348143447979"}>
-            <span style={{ color: "green", textDecoration: "underline" }}>
+          Made with <span style={{ color: 'red' }}>❤</span> by{' '}
+          <a href="https://www.wa.me/2348143447979">
+            <span style={{ color: 'green', textDecoration: 'underline' }}>
               Z-CODES
             </span>
           </a>

@@ -8,6 +8,7 @@ import blog from './documents/blog';
 import author from './documents/author';
 import category from './documents/category';
 import featured from './documents/featured';
+import events from './documents/events';
 
 // Custom Objects
 import customImage from './documents/objects/customImage';
@@ -17,5 +18,15 @@ import customTable from './documents/objects/customTable';
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([blog, author, category, customImage, textEditor, customTable, excerptText, featured]),
+  types: schemaTypes.concat([
+    blog,
+    author,
+    category,
+    customImage,
+    textEditor,
+    customTable,
+    excerptText,
+    featured,
+    events,
+  ]),
 });
