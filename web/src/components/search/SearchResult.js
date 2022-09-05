@@ -4,6 +4,8 @@ import ParagraphText from '../typography/ParagraphText';
 import {
   BlogsSearchResultItem,
   CategoriesSearchResultItem,
+  EventsSearchResultItem,
+  AuthorsSearchResultItem,
 } from './SearchResultItem';
 
 function SearchResult({
@@ -58,6 +60,22 @@ function SearchResult({
           <ParagraphText>Categories</ParagraphText>
           {categoriesResult?.map((result) => (
             <CategoriesSearchResultItem key={result.id} category={result} />
+          ))}
+        </>
+      )}
+      {eventsResult.length > 0 && (
+        <>
+          <ParagraphText>Events</ParagraphText>
+          {eventsResult?.map((result) => (
+            <EventsSearchResultItem key={result.id} event={result} />
+          ))}
+        </>
+      )}
+      {authorsResult.length > 0 && (
+        <>
+          <ParagraphText>Authors</ParagraphText>
+          {authorsResult?.map((result) => (
+            <AuthorsSearchResultItem key={result.id} author={result} />
           ))}
         </>
       )}

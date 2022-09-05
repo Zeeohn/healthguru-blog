@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { MdClose } from 'react-icons/md';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -38,6 +38,15 @@ function Search() {
   const [categoriesIndexStore, setCategoriesIndexStore] = useState(null);
   const [eventsIndexStore, setEventsIndexStore] = useState(null);
   const [authorsIndexStore, setAuthorsIndexStore] = useState(null);
+
+  useEffect(() => {
+    if (isSearchModalOpen) {
+      document.body.style.overflow = 'hidden';
+      setSearchQuery('');
+    } else {
+      document.body.style.overflow = 'initial';
+    }
+  }, [isSearchModalOpen]);
 
   const {
     publicStoreURL: blogsPublicStoreURL,

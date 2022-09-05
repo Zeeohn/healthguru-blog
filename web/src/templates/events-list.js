@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PageSpace from '../components/PageSpace';
 import SEO from '../components/SEO';
 import PageHeader from '../components/PageHeader';
-import BlogGrid from '../components/blogs/BlogGrid';
+import EventsGrid from '../components/blogs/EventsGrid';
 import ParagraphText from '../components/typography/ParagraphText';
 import Pagination from '../components/Pagination';
 
@@ -38,13 +38,17 @@ function EventsList({ data, pageContext }) {
   console.log(eventsMain);
   const { currentPage, numberOfPages } = pageContext;
 
-  const currentTime = new Date();
-
+  const currentTime = Date.now();
+  /* const now = new Date(currentTime).toISOString();
+  const d1 = (element) => {
+    new Date(element).toISOString();
+  }; */
   const checkIsCurrent = (event) => {
-    const date = new Date(Date.parse(event.publishedAt));
-    return date >= currentTime;
+    const date = Date.parse(event.publishedAt);
+    return date !== currentTime;
   };
   const events = eventsMain.filter(checkIsCurrent);
+
   return (
     <PageSpace top={80} bottom={100}>
       <SEO title="Events" />
@@ -61,12 +65,13 @@ function EventsList({ data, pageContext }) {
           description="Checkout this page regularly to be notified of any upcoming event that we are organizing!"
         />
         {events.length > 0 ? (
-          events.forEach(({ id }) => <BlogGrid blog={events} key={id} />)
+          events.forEach(({ id }) => <EventsGrid events={events} key={id} />)
         ) : (
           <ParagraphText>
             No Upcoming events for now! Check back later 😉😏
           </ParagraphText>
         )}
+        <EventsGrid events={events} />
         {numberOfPages > 1 && (
           <Pagination
             currentPage={currentPage}
