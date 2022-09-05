@@ -17,7 +17,7 @@ export const SearchResultItemStyles = styled(Link)`
   .title {
     font-size: 1.6rem;
   }
-  .categoriesText {
+  .publishedAtText {
     font-size: 1.3rem;
     a {
       color: var(--grey);

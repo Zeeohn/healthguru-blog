@@ -6,7 +6,7 @@ function BlogGrid({ blogs }) {
   return (
     <BlogGridStyles>
       {blogs &&
-        blogs.map((blog) => (
+        blogs?.map((blog) => (
           <BlogItem
             key={blog.id}
             title={blog.title}
