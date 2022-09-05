@@ -39,13 +39,13 @@ function EventsList({ data, pageContext }) {
   console.log(events.publishedAt);
   const { currentPage, numberOfPages } = pageContext;
 
-  const currentTime = new Date();
+  const currentTime = Date.now();
   /*const now = new Date(currentTime).toISOString();
   const d1 = (element) => {
     new Date(element).toISOString();
   };*/
 const checkIsCurrent=(event)=>{
-let date = new Date(Date.parse(event.publishedAt));
+let date = Date.parse(event.publishedAt);
 return date>=currentTime;
 }
 const events = eventsMain.filter(checkIsCurrent);
