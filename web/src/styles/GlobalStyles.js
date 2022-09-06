@@ -33,7 +33,6 @@ const GlobalStyles = createGlobalStyle`
   }
   a{
     text-decoration: none;
-    color: var(--black);
   }
   .container{
     max-width: 1200px;

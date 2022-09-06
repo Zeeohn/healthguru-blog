@@ -5,7 +5,7 @@ export const FooterStyles = styled.footer`
   text-align: center;
   background-color: var(--black-2);
   .footerImage {
-    width: 20%;
+    width: 8%;
     background-color: white;
   }
   .footer__text {
@@ -45,5 +45,11 @@ export const FooterStyles = styled.footer`
     margin-top: 1rem;
     color: var(--gray);
     font-size: 1.2rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .footerImage {
+      width: 20%;
+    }
   }
 `;

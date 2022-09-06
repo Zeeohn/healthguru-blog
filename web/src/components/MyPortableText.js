@@ -68,10 +68,10 @@ const myPortableTextComponents = {
     ),
     em: ({ children }) => <em>{children}</em>,
     sup: ({ children }) => (
-      <sup style={{ fontWeight: '500', fontSize: '10px' }}>{children}</sup>
+      <sup style={{ fontWeight: '500', fontSize: '20px' }}>{children}</sup>
     ),
     sub: ({ children }) => (
-      <sub style={{ fontWeight: '500', fontSize: '10px' }}>{children}</sub>
+      <sub style={{ fontWeight: '500', fontSize: '20px' }}>{children}</sub>
     ),
   },
   lists: {
@@ -80,8 +80,13 @@ const myPortableTextComponents = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <ParagraphText style={{ color: '#070747', marginLeft: '30px' }}>
+      <ParagraphText style={{ marginLeft: '30px' }}>
         <li style={{ listStyleType: 'square' }}>{children}</li>
+      </ParagraphText>
+    ),
+    number: ({ children }) => (
+      <ParagraphText>
+        <li style={{ listStyleType: 'decimal' }}>{children}</li>
       </ParagraphText>
     ),
   },

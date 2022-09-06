@@ -13,7 +13,7 @@ export default styled.header`
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 0 1.5rem 0 4rem;
+    padding: 0 1.5rem 0 10rem;
   }
   .nav__wrapper {
     ul {
@@ -95,7 +95,7 @@ export default styled.header`
             }
             a {
               width: 100%;
-              padding: 0.5rem 1rem;
+              padding: 0.5rem 2rem;
               border-radius: 4px;
               color: var(--white);
             }
@@ -140,6 +140,9 @@ export default styled.header`
       svg {
         font-size: 2.5rem;
       }
+    }
+    .header__container {
+      padding: 0 1.5rem 0 3rem;
     }
   }
 `;
