@@ -1,14 +1,14 @@
-import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
-import { format } from 'date-fns';
-import { FiCalendar } from 'react-icons/fi';
-import { SingleBlogStyles } from '../styles/blog/SingleBlogStyles';
-import SEO from '../components/SEO';
-import PageSpace from '../components/PageSpace';
-import { Title } from '../components/typography/Title';
-import ParagraphText from '../components/typography/ParagraphText';
-import MyPortableText from '../components/MyPortableText';
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
+import { format } from "date-fns";
+import { FiCalendar } from "react-icons/fi";
+import { SingleBlogStyles } from "../styles/blog/SingleBlogStyles";
+import SEO from "../components/SEO";
+import PageSpace from "../components/PageSpace";
+import { Title } from "../components/typography/Title";
+import ParagraphText from "../components/typography/ParagraphText";
+import MyPortableText from "../components/MyPortableText";
 
 export const eventQuery = graphql`
   query SingleEventQuery($id: String!) {
@@ -45,13 +45,13 @@ function SingleEvent({ data }) {
             />
             <Title className="title">{event.title}</Title>
             <ParagraphText className="publishedAt">
-              <FiCalendar /> Event Date:{' '}
-              {format(new Date(event.publishedAt), 'p, MMM dd yyyy')}
+              <FiCalendar /> Event Date:{" "}
+              {format(new Date(event.publishedAt), "p, MMM dd yyyy")}
             </ParagraphText>
           </div>
           <hr className="hr" />
           <div className="body">
-            <MyPortableText value={event._rawBody} />
+            <MyPortableText values={event._rawBody} />
           </div>
         </div>
       </PageSpace>

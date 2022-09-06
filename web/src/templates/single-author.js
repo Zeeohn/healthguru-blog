@@ -1,12 +1,12 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import PageSpace from '../components/PageSpace';
-import SEO from '../components/SEO';
-import { SingleAuthorStyles } from '../styles/author/SingleAuthorStyles';
-import { Title } from '../components/typography/Title';
-import MyPortableText from '../components/MyPortableText';
-import BlogGrid from '../components/blogs/BlogGrid';
+import React from "react";
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import PageSpace from "../components/PageSpace";
+import SEO from "../components/SEO";
+import { SingleAuthorStyles } from "../styles/author/SingleAuthorStyles";
+import { Title } from "../components/typography/Title";
+import MyPortableText from "../components/MyPortableText";
+import BlogGrid from "../components/blogs/BlogGrid";
 
 export const authorQuery = graphql`
   query SingleAuthorQuery($id: String!) {
@@ -62,7 +62,7 @@ function SingleAuthor({ data }) {
             />
             <Title className="name">{author.name}</Title>
             <div className="bio">
-              <MyPortableText value={author._rawBio} />
+              <MyPortableText values={author._rawBio} />
             </div>
           </div>
           <hr className="hr" />

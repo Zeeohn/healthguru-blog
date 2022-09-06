@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { FooterStyles } from '../styles/FooterStyles';
-import Logo from './Logo';
 import ParagraphText from './typography/ParagraphText';
 import { menu } from '../constants/menu';
 import { SocialLinks } from '../constants/SocialLinks';
+import logo from '../images/logo-dark.png';
 
 function Footer() {
   return (
     <FooterStyles>
       <div className="container">
-        <Logo />
+        <Link to="/">
+          <img src={logo} alt="Health Guru logo" className="footerImage" />
+        </Link>
         <ParagraphText className="footer__text">
-          lorem ipsum sndbfh shb fhasbdkhb ,asfbhdsakbdfjkbdsf jkdhsfnjkdsh
-          fkjdsnf kjhsdnf kshdfj sn hdf nksajdhakj jhsajfhnsdjkfh jsfnjs.
+          Get to know how to live and adopt a healthy lifestyle, the best
+          practices for your health, eating habits and physical wellbeing. You
+          can know more by joining our WhatsApp TV.
         </ParagraphText>
         <ul className="footer__menuList">
           {menu.map((item) => (

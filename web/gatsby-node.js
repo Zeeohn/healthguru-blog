@@ -104,7 +104,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   Array.from({ length: totalBlogListPages }).forEach((_, index) => {
     createPage({
-      path: index === 0 ? '/blogs' : `/blogs/page${index + 1}`,
+      path: index === 0 ? '/blogs' : `/blogs/${index + 1}`,
       component: blogListTemplate,
       context: {
         limit: postsPerPage,

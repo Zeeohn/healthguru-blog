@@ -54,10 +54,36 @@ function BlockTable(props) {
 
 const myPortableTextComponents = {
   block: {
-    normal: ({ children }) => <ParagraphText>{children}</ParagraphText>,
+    normal: ({ children }) => (
+      <ParagraphText style={{ color: 'gray' }}>{children}</ParagraphText>
+    ),
     h1: ({ children }) => <Title>{children}</Title>,
-    h2: ({ children }) => <h3>{children}</h3>,
+    h2: ({ children }) => <h3 style={{ color: '#166D3B' }}>{children}</h3>,
     blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+  },
+  marks: {
+    link: ({ children }) => <a style={{ color: 'blue' }}>{children}</a>,
+    strong: ({ children }) => (
+      <strong style={{ fontWeight: '600' }}>{children}</strong>
+    ),
+    em: ({ children }) => <em>{children}</em>,
+    sup: ({ children }) => (
+      <sup style={{ fontWeight: '500', fontSize: '10px' }}>{children}</sup>
+    ),
+    sub: ({ children }) => (
+      <sub style={{ fontWeight: '500', fontSize: '10px' }}>{children}</sub>
+    ),
+  },
+  lists: {
+    bullet: ({ children }) => <ul style={{ Left: '20px' }}>{children}</ul>,
+    number: ({ children }) => <ol>{children}</ol>,
+  },
+  listItem: {
+    bullet: ({ children }) => (
+      <ParagraphText style={{ color: '#070747', marginLeft: '30px' }}>
+        <li style={{ listStyleType: 'square' }}>{children}</li>
+      </ParagraphText>
+    ),
   },
   types: {
     customImage: ({ value }) => {
@@ -85,8 +111,8 @@ const myPortableTextComponents = {
   },
 };
 
-function MyPortableText({ value }) {
-  return <PortableText value={value} components={myPortableTextComponents} />;
+function MyPortableText({ values }) {
+  return <PortableText value={values} components={myPortableTextComponents} />;
 }
 
 export default MyPortableText;

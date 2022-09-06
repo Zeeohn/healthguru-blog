@@ -23,14 +23,19 @@ export const SingleBlogStyles = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+    &:hover {
+      color: #166d3b;
+    }
     svg {
       height: 20px;
       width: 20px;
+      color: #166d3b;
     }
     a {
       color: var(--gray);
       &:hover {
         text-decoration: underline;
+        color: #166d3b;
       }
     }
   }

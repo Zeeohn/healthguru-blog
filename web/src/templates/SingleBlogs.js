@@ -1,15 +1,15 @@
-import { graphql, Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
-import { format } from 'date-fns';
-import { FiCalendar, FiUser } from 'react-icons/fi';
-import { BiCategory } from 'react-icons/bi';
-import { SingleBlogStyles } from '../styles/blog/SingleBlogStyles';
-import SEO from '../components/SEO';
-import PageSpace from '../components/PageSpace';
-import { Title } from '../components/typography/Title';
-import ParagraphText from '../components/typography/ParagraphText';
-import MyPortableText from '../components/MyPortableText';
+import { graphql, Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
+import { format } from "date-fns";
+import { FiCalendar, FiUser } from "react-icons/fi";
+import { BiCategory } from "react-icons/bi";
+import { SingleBlogStyles } from "../styles/blog/SingleBlogStyles";
+import SEO from "../components/SEO";
+import PageSpace from "../components/PageSpace";
+import { Title } from "../components/typography/Title";
+import ParagraphText from "../components/typography/ParagraphText";
+import MyPortableText from "../components/MyPortableText";
 
 export const postQuery = graphql`
   query SingleBlogQuery($id: String!) {
@@ -56,7 +56,7 @@ function SingleBlogs({ data }) {
             <Title className="title">{blog.title}</Title>
             <ParagraphText className="publishedAt">
               <FiCalendar />
-              {format(new Date(blog.publishedAt), 'p, MMM dd yyyy')}
+              {format(new Date(blog.publishedAt), "p, MMM dd yyyy")}
             </ParagraphText>
             <ParagraphText className="categoriesText">
               <BiCategory />
@@ -66,7 +66,7 @@ function SingleBlogs({ data }) {
                     <Link to={`/categories/${item.slug.current}`}>
                       {item.title}
                     </Link>
-                    {index < blog.category.length - 1 ? ', ' : ''}
+                    {index < blog.category.length - 1 ? ", " : ""}
                   </span>
                 ))}
               </span>
@@ -80,7 +80,7 @@ function SingleBlogs({ data }) {
           </div>
           <hr className="hr" />
           <div className="body">
-            <MyPortableText value={blog._rawBody} />
+            <MyPortableText values={blog._rawBody} />
           </div>
         </div>
       </PageSpace>

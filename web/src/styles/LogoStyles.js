@@ -3,12 +3,16 @@ import { Link } from 'gatsby';
 
 export default styled(Link)`
   display: inline-block;
-  max-width: 200px;
-  `;
-  
-  // svg {
-  //   font-size: 3rem;
-  //   path {
-  //     stroke: white;
-  //   }
+  width: 70%;
+
+  // @media only screen and (max-width: 768px) {
+  //   width: 70%;
   // }
+`;
+
+// svg {
+//   font-size: 3rem;
+//   path {
+//     stroke: white;
+//   }
+// }

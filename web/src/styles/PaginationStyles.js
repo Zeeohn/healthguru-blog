@@ -14,7 +14,8 @@ export const PaginationStyles = styled.div`
       align-items: center;
       justify-content: center;
       font-size: 1.6rem;
-      background: var(--gray);
+      background: #166d3b;
+      color: white;
       padding: 0.8rem;
       border-radius: 4px;
       svg {

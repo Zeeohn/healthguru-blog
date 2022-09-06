@@ -31,9 +31,11 @@ export const HeroSectionStyles = styled.div`
         font-family: 'Poppins', sans-serif;
         font-weight: '700';
         margin: 0.2rem 0;
+        color: #04aa4e;
       }
       .hero__text {
         max-width: 350px;
+        color: white;
       }
       .hero__button {
         margin-top: 1.5rem;

@@ -1,12 +1,12 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import PageSpace from '../components/PageSpace';
-import { SingleCategoryStyles } from '../styles/category/SingleCategoryStyles';
-import SEO from '../components/SEO';
-import PageHeader from '../components/PageHeader';
-import MyPortableText from '../components/MyPortableText';
-import BlogGrid from '../components/blogs/BlogGrid';
+import React from "react";
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import PageSpace from "../components/PageSpace";
+import { SingleCategoryStyles } from "../styles/category/SingleCategoryStyles";
+import SEO from "../components/SEO";
+import PageHeader from "../components/PageHeader";
+import MyPortableText from "../components/MyPortableText";
+import BlogGrid from "../components/blogs/BlogGrid";
 
 export const query = graphql`
   query SingleCategory($id: String!) {
@@ -54,7 +54,7 @@ function SingleCategory({ data }) {
         <div className="container">
           <SEO title={category.title} />
           <PageHeader title={category.title} className="pageHeader">
-            <MyPortableText value={category._rawDescription} />
+            <MyPortableText values={category._rawDescription} />
             <GatsbyImage
               image={category.coverImage.asset.gatsbyImageData}
               className="coverImage"

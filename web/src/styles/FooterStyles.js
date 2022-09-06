@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const FooterStyles = styled.footer`
-  padding: 5rem 0 2rem 0;
+  padding: 3rem 0 2rem 0;
   text-align: center;
   background-color: var(--black-2);
+  .footerImage {
+    width: 20%;
+    background-color: white;
+  }
   .footer__text {
     margin: 0 auto;
     margin-top: 1rem;
@@ -27,7 +31,7 @@ export const FooterStyles = styled.footer`
       margin: 0 0.5rem;
       a {
         display: inline-block;
-        width: 20px;
+        width: 25px;
         color: var(--gray);
       }
       :hover {

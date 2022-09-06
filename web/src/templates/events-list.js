@@ -35,7 +35,7 @@ export const EventsQuery = graphql`
 function EventsList({ data, pageContext }) {
   const eventsMain = data.allSanityEvents.nodes;
 
-  //console.log(eventsMain);
+  // console.log(eventsMain);
   const { currentPage, numberOfPages } = pageContext;
 
   const currentTime = Date.now();
@@ -53,25 +53,27 @@ function EventsList({ data, pageContext }) {
     <PageSpace top={80} bottom={100}>
       <SEO title="Events" />
       <div className="container">
-        /*{console.log(
+        {/*
+        {console.log(
           events,
           eventsMain,
           currentPage,
           currentTime,
           numberOfPages
-        )}*/
+        )}
+        */}
         <PageHeader
           title="Upcoming Events"
           description="Checkout this page regularly to be notified of any upcoming event that we are organizing!"
         />
-        {events.length > 0 ? (
-         <EventsGrid events={events} />
+        {events.length >= 0 ? (
+          <EventsGrid events={events} />
         ) : (
           <ParagraphText>
             No Upcoming events for now! Check back later 😉😏
           </ParagraphText>
         )}
-        <EventsGrid events={events} />
+        {/* <EventsGrid events={events} /> */}
         {numberOfPages > 1 && (
           <Pagination
             currentPage={currentPage}
@@ -79,10 +81,6 @@ function EventsList({ data, pageContext }) {
             baseURL="/events"
           />
         )}
-        <PageHeader
-          title="Past Events"
-          description="Incase you missed an event , you can come here to get a summary of what happened at the event"
-        />
       </div>
     </PageSpace>
   );
