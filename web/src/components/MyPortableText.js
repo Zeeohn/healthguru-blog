@@ -85,7 +85,7 @@ const myPortableTextComponents = {
       </ParagraphText>
     ),
     number: ({ children }) => (
-      <ParagraphText>
+      <ParagraphText style={{ marginLeft: '30px' }}>
         <li style={{ listStyleType: 'decimal' }}>{children}</li>
       </ParagraphText>
     ),

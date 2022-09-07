@@ -66,6 +66,7 @@ function EventsList({ data, pageContext }) {
           title="Upcoming Events"
           description="Checkout this page regularly to be notified of any upcoming event that we are organizing!"
         />
+        {/*
         {events.length >= 0 ? (
           <EventsGrid events={events} />
         ) : (
@@ -73,7 +74,8 @@ function EventsList({ data, pageContext }) {
             No Upcoming events for now! Check back later 😉😏
           </ParagraphText>
         )}
-        {/* <EventsGrid events={events} /> */}
+      */}
+        <EventsGrid events={events} />
         {numberOfPages > 1 && (
           <Pagination
             currentPage={currentPage}

@@ -23,12 +23,15 @@ function HeroSection() {
             <Button to="/blogs" tag={Link} className="hero__button">
               Explore blogs
             </Button>
-            {/* <a
+            <a
               href="https://wa.me/2349150823022?text=Hello%2C%20HealthGuruTv%20I%20will%20will%20like%20to%20join%20your%20TV%20and%20view%20your%20status%20My%20name%20is%20"
               target="_blank"
               rel="noreferrer"
             >
-            </a> */}
+              <button type="button" className="hero__button2">
+                Join WhatsApp TV
+              </button>
+            </a>
           </div>
           <div className="right">
             <StaticImage

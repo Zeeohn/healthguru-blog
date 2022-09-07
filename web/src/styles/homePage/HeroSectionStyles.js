@@ -40,6 +40,20 @@ export const HeroSectionStyles = styled.div`
       .hero__button {
         margin-top: 1.5rem;
       }
+      .hero__button2 {
+        margin-left: 2rem;
+        display: inline-block;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        border: none;
+        outline: none;
+        color: #04aa4e;
+        background-color: white;
+        font-family: inter;
+        line-height: 1.5;
+      }
     }
     .right {
       position: absolute;
@@ -83,6 +97,10 @@ export const HeroSectionStyles = styled.div`
         .hero__heading {
           max-width: 330px;
           font-size: 3rem;
+        }
+        .hero__button2 {
+          padding: 0.8rem 1.2rem;
+          font-size: 1.4rem;
         }
       }
     }
