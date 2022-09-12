@@ -4,7 +4,7 @@ const sanityConfig = require('./sanity-config');
 module.exports = {
   siteMetadata: {
     title: `Health Guru Blog`,
-    siteUrl: `https://healthguru-blog.vercel.app`,
+    siteUrl: `https://healthguru-blog.vercel.app/`,
     description: `This is a blog and WhatsApp TV that advises on health related issues, physical & mental wellness, and best health practices.`,
     image: `./static/gatsby-icon.png`,
     twitterUsername: `@HealthGuru_Ng`,

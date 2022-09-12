@@ -7,11 +7,11 @@ function SEO({ title, description }) {
     {
       site {
         siteMetadata {
+          siteUrl
           description
           title
           image
           twitterUsername
-          siteUrl
         }
       }
     }
@@ -22,6 +22,7 @@ function SEO({ title, description }) {
       ? `${title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
     description: description || site.siteMetadata.description,
+    url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${site.siteMetadata.image}`,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
