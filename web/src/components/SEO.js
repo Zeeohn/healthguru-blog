@@ -21,7 +21,7 @@ function SEO({ title, description }) {
       ? `${title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
     description: description || site.siteMetadata.description,
-    image: `${siteUrl}${site.siteMetadata.image}`,
+    image: site.siteMetadata.image,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
 

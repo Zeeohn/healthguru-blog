@@ -34,7 +34,8 @@ function Footer() {
         </ul>
         <ParagraphText className="copyright">
           Made with <span style={{ color: 'red' }}>❤</span> by{' '}
-          <a href="https://wa.me/message/ACG6T4NMBL2EE1">
+          <a href="https://wa.me/message/ACG6T4NMBL2EE1" target="_blank"
+              rel="noreferrer">
             <span style={{ color: 'green', textDecoration: 'underline', fontWeight: '500' }}>
               Z-CODES
             </span>
