@@ -137,7 +137,7 @@ export default styled.header`
       gap: 1rem;
     }
     .mobileMenuBtn {
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       svg {
         font-size: 2.5rem;
       }

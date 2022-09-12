@@ -6,7 +6,7 @@ import TopCategories from '../components/homepage/TopCategories';
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO />
     <HeroSection />
     <div className="container">
       <FeaturedBlogs />

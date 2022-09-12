@@ -11,6 +11,7 @@ function SEO({ title, description }) {
           title
           image
           twitterUsername
+          siteUrl
         }
       }
     }
@@ -21,20 +22,20 @@ function SEO({ title, description }) {
       ? `${title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
     description: description || site.siteMetadata.description,
-    image: site.siteMetadata.image,
+    image: `${siteUrl}${site.siteMetadata.image}`,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
 
   return (
     <Helmet>
       <title>{seo.title}</title>
-      <meta property="og:title" content={seo.title}/>
-      <meta property="og:description" content={seo.description} />
+      <meta property="og:title" content={seo.title} />
+      <meta name="description"  property="og:description" content={seo.description} />
       <meta
         name="keywords"
         content={"health, fitness, healthy living, WhatsApp tv, blog, menstrual pain, exercise, health guru, healthguru"}
       />
-      <meta property="og:image" content={seo.image} />
+      <meta name="image" property="og:image" content={seo.image} />
       <meta property="og:type" content={"website"} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
