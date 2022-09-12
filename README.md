@@ -2,7 +2,7 @@
 
 A complete blog website created with `JAMstack`. ([Gatsby.js](https://www.gatsbyjs.org/) & [Sanity.io](https://sanity.io)).
 
-Made with ❤️ by [Success Zion]
+Made with ❤️ by ([Z-CODES](https://wa.me/message/ACG6T4NMBL2EE1)
 
 - Live Preview: [https://healthguru-blog.vercel.app/][preview]
 
@@ -10,9 +10,9 @@ Made with ❤️ by [Success Zion]
 
 ## Project Details
 
-TechHub-blog is a complete tech blog website. Here we will see three post types: `blogs`, `categories`, and `authors`. We will create relations between these three post types. So that we can create a blog post with a category and an author. Also we will make a `search feature` where we can search against all these three post types.
+Official Health Blog website for HealthGuru.
 
-To create this website we will use `JAMstack`. We will use `Gatsby.js` for the frontend and `Sanity.io` for the headless CMS. And to source our content we will use `graphql`.
+Site was created using the `JAMstack`. I used `Gatsby.js` for the frontend and `Sanity.io` for the headless CMS. And the content was sourced from the CMS using `graphql`. Site is hosted on `vercel` and connected to the CMS via webhooks!
 
 ## Technologies/frameworks used include;
 
@@ -39,4 +39,4 @@ then after installation, run;
 npm run dev
 ```
 
-to start the development environment on your server
+to start the development environment on your local system.

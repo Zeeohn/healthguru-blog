@@ -42,7 +42,7 @@ function BlogList({ data, pageContext }) {
   const blogs = data.allSanityBlog.nodes;
   return (
     <>
-      <SEO title="Blogs" image={} />
+      <SEO title="Blogs" />
       <PageSpace top={80} bottom={100}>
         <div className="container">
           <PageHeader

@@ -22,7 +22,7 @@ function SEO({ title, description }) {
       : site.siteMetadata.title,
     description: description || site.siteMetadata.description,
     image: `${siteUrl}${site.siteMetadata.image}`,
-    site.siteMetadata.twitterUsername,
+    twitterUsername: site.siteMetadata.twitterUsername,
   };
 
   return (
