@@ -1,12 +1,10 @@
-![techhub-blog](./banner.png)
-
 # HealthGuru-Blog
 
 A complete blog website created with `JAMstack`. ([Gatsby.js](https://www.gatsbyjs.org/) & [Sanity.io](https://sanity.io)).
 
 Made with ❤️ by [Success Zion]
 
-- Live Preview: [http://techhub-blog.vercel.app/][preview]
+- Live Preview: [https://healthguru-blog.vercel.app/][preview]
 
 ---
 
@@ -27,12 +25,18 @@ To create this website we will use `JAMstack`. We will use `Gatsby.js` for the f
 - [React-PortableText](https://github.com/portabletext/react-portabletext)
 - [Axios](https://www.npmjs.com/package/axios)
 
-## Requirements
-
-- Basic knowledge of HTML, CSS, and JavaScript
-- Experience with React.js
-
 ## Getting Started
 
-You can follow our complete youtube tutorial [Coming Soon]
-or You can clone the project and git checkout to starter-files branch to get started.
+You can clone the project and navigate to the web folder to view the frontend of the project and run;
+
+```
+npm install
+```
+
+then after installation, run;
+
+```
+npm run dev
+```
+
+to start the development environment on your server

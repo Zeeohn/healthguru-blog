@@ -5,6 +5,6 @@ export const wrapPageElement = ({ element, props }) => (
   <Layout {...props}>{element}</Layout>
 );
 
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+export const onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: "en" })
 }
