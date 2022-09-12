@@ -4,8 +4,10 @@ const sanityConfig = require('./sanity-config');
 module.exports = {
   siteMetadata: {
     title: `Health Guru Blog`,
-    siteUrl: `https://www.healthguru.com`,
-    description: `We are a blog and WhatsApp TV that advises on health related issues, physical and mental wellness and best health practices.`,
+    siteUrl: `https://www.healthguru.com.ng`,
+    description: `This is a blog and WhatsApp TV that advises on health related issues, physical & mental wellness, and best health practices.`,
+    image: `/gatsby-icon.png`,
+    twitterUsername: `@HealthGuru_Ng`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

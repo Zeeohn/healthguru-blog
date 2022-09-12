@@ -68,10 +68,12 @@ const myPortableTextComponents = {
     ),
     em: ({ children }) => <em>{children}</em>,
     sup: ({ children }) => (
-      <sup style={{ fontWeight: '500', fontSize: '20px' }}>{children}</sup>
+      // <sup style={{ fontWeight: '500', fontSize: '20px' }}>{children}</sup>
+      <sup>{children}</sup>
     ),
     sub: ({ children }) => (
-      <sub style={{ fontWeight: '500', fontSize: '20px' }}>{children}</sub>
+      // <sub style={{ fontWeight: '500', fontSize: '20px' }}>{children}</sub>
+      <sub>{children}</sub>
     ),
   },
   lists: {

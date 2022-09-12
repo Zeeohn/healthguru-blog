@@ -52,7 +52,7 @@ function SingleCategory({ data }) {
     <PageSpace top={80} bottom={100}>
       <SingleCategoryStyles>
         <div className="container">
-          <SEO title={category.title} />
+          <SEO title={category.title} image={category.coverImage.asset.gatsbyImageData}/>
           <PageHeader title={category.title} className="pageHeader">
             <MyPortableText values={category._rawDescription} />
             <GatsbyImage

@@ -146,4 +146,27 @@ export default styled.header`
       padding: 0 1.5rem 0 3rem;
     }
   }
+
+  @media only screen and (max-width: 480px) { 
+    .mobileMenuBtn {
+      margin-left: 1rem;
+      svg {
+        font-size: 1.5rem;
+      }
+    }
+
+    .searchIcon {
+      cursor: pointer;
+      font-size: 15px;
+      .searchIcon__wrapper {
+        border-radius: 3px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--black-2);
+        color: var(--white);
+      }
+    }
+  }
 `;

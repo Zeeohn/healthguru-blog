@@ -44,7 +44,7 @@ function SingleBlogs({ data }) {
 
   return (
     <SingleBlogStyles>
-      <SEO title={blog.title} />
+      <SEO title={blog.title} image={blog.coverImage.asset.gatsbyImageData}/>
       <PageSpace top={80} bottom={100}>
         <div className="container">
           <div className="blog-header">
