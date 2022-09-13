@@ -6,7 +6,7 @@ module.exports = {
     title: `Health Guru Blog`,
     siteUrl: `https://healthguru-blog.vercel.app/`,
     description: `This is a blog and WhatsApp TV that advises on health related issues, physical & mental wellness, and best health practices.`,
-    image: `/gatsby-icon.png`,
+    image: `src/images/preview-icon.png`,
     twitterUsername: `@HealthGuru_Ng`,
   },
   plugins: [
@@ -15,6 +15,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      }
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
