@@ -137,7 +137,7 @@ export default styled.header`
       gap: 1rem;
     }
     .mobileMenuBtn {
-      margin-left: 0.5rem;
+      margin-left: 1rem;
       svg {
         font-size: 2.5rem;
       }
@@ -149,15 +149,15 @@ export default styled.header`
 
   @media only screen and (max-width: 480px) { 
     .mobileMenuBtn {
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       svg {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
     }
 
     .searchIcon {
       cursor: pointer;
-      font-size: 15px;
+      font-size: 20px;
       .searchIcon__wrapper {
         border-radius: 3px;
         padding: 1rem;

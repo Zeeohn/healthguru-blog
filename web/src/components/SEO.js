@@ -7,7 +7,6 @@ function SEO({ title, description }) {
     {
       site {
         siteMetadata {
-          siteUrl
           description
           title
           image
@@ -22,8 +21,7 @@ function SEO({ title, description }) {
       ? `${title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
     description: description || site.siteMetadata.description,
-    url: `${siteUrl}${pathname || ``}`,
-    image: `${siteUrl}${site.siteMetadata.image}`,
+    image: site.siteMetadata.image,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
 
@@ -31,7 +29,8 @@ function SEO({ title, description }) {
     <Helmet>
       <title>{seo.title}</title>
       <meta property="og:title" content={seo.title} />
-      <meta name="description"  property="og:description" content={seo.description} />
+      <meta name="description" content={seo.description} />
+      <meta property="og:description" content={seo.description} />
       <meta
         name="keywords"
         content={"health, fitness, healthy living, WhatsApp tv, blog, menstrual pain, exercise, health guru, healthguru"}
