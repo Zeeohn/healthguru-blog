@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router";
 
 function SEO({ title, description, twitterUsername, images }) {
   const { site, image } = useStaticQuery(graphql`
-    {
+    query SeoMetaData {
       site {
         siteMetadata {
           description
@@ -50,7 +50,7 @@ function SEO({ title, description, twitterUsername, images }) {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
       <meta name="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.ogImage} />
