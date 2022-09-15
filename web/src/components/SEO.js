@@ -15,7 +15,7 @@ function SEO({ title, description, twitterUsername, images }) {
         }
       }
       image: file(
-      absolutePath: { glob: "**/src/images/preview-icon.png}
+      absolutePath: { glob: "**/src/images/preview-icon.png"}
       ) {
         childImageSharp {
           gatsbyImageData(layout: FIXED, width: 1200)
