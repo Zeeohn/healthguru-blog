@@ -3,8 +3,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 
-function SEO({ title, description, twitterUsername, images }) {
-  const { site, image } = useStaticQuery(graphql`
+function SEO(props) {
+  const { site, images } = useStaticQuery(graphql`
     query SeoMetaData {
       site {
         siteMetadata {
@@ -14,7 +14,7 @@ function SEO({ title, description, twitterUsername, images }) {
           twitterUsername
         }
       }
-      image: file(
+      images: file(
       absolutePath: { glob: "**/src/images/preview-icon.png"}
       ) {
         childImageSharp {
@@ -27,11 +27,11 @@ function SEO({ title, description, twitterUsername, images }) {
   const location = useLocation();
 
   const seo = {
-    title: title
-      ? `${title} - ${site.siteMetadata.title}`
+    title: props.title
+      ? `${props.title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
-    description: description || site.siteMetadata.description,
-    ogImage: images.image ?? image?.childImageSharp?.gatsbyImageData,
+    description: props.description || site.siteMetadata.description,
+    images: props.images ?? images?.childImageSharp?.gatsbyImageData,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
 
@@ -45,15 +45,15 @@ function SEO({ title, description, twitterUsername, images }) {
         name="keywords"
         content={"health, fitness, healthy living, WhatsApp tv, blog, menstrual pain, exercise, health guru, healthguru"}
       />
-      <meta name="image" content={seo.ogImage} />
-      <meta property="og:image" content={seo.ogImage} />
+      <meta name="image" content={seo.images} />
+      <meta property="og:image" content={seo.images} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
       <meta name="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.ogImage} />
+      <meta name="twitter:image" content={seo.images} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
     </Helmet>
   );

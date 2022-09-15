@@ -51,7 +51,10 @@ function SingleAuthor({ data }) {
 
   return (
     <PageSpace top={80} bottom={100}>
-      <SEO title={author.name} image={author.profileImage.asset.gatsbyImageData}/>
+      <SEO
+        title={author.name}
+        images={author.profileImage.asset.gatsbyImageData}
+      />
       <div className="container">
         <SingleAuthorStyles>
           <div className="author-header">
