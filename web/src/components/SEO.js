@@ -25,13 +25,12 @@ function SEO(props) {
   `);
 
   const location = useLocation();
-
   const seo = {
     title: props.title
       ? `${props.title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
     description: props.description || site.siteMetadata.description,
-    images: props.images ?? images?.childImageSharp?.gatsbyImageData,
+    images: props.images ?? images?.childImageSharp?.gatsbyImageData.fallback.src,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
 
@@ -57,6 +56,7 @@ function SEO(props) {
       <meta name="twitter:creator" content={seo.twitterUsername} />
     </Helmet>
   );
+  
 }
 
 export default SEO;
