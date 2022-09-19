@@ -30,7 +30,7 @@ function SEO(props) {
       ? `${props.title} - ${site.siteMetadata.title}`
       : site.siteMetadata.title,
     description: props.description || site.siteMetadata.description,
-    images: props.images ?? images?.childImageSharp?.gatsbyImageData.fallback.src,
+    images: props.images ?? images?.childImageSharp?.gatsbyImageData?.fallback?.src,
     twitterUsername: site.siteMetadata.twitterUsername,
   };
 
@@ -47,8 +47,8 @@ function SEO(props) {
       <meta name="image" content={seo.images} />
       <meta property="og:image" content={seo.images} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
-      <meta name="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
+      <meta property="og:url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} /
+      <meta name="url" content={`${site?.siteMetadata?.siteUrl}${location.pathname}`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
