@@ -46,6 +46,8 @@ function SEO(props) {
       />
       <meta name="image" content={seo.images} />
       <meta property="og:image" content={seo.images} />
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="300" />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
