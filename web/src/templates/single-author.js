@@ -53,7 +53,9 @@ function SingleAuthor({ data }) {
     <PageSpace top={80} bottom={100}>
       <SEO
         title={author.name}
-        images={author.profileImage.asset.gatsbyImageData}
+        images={
+          author?.coverImage?.asset?.gatsbyImageData?.images?.fallback?.src
+        }
       />
       <div className="container">
         <SingleAuthorStyles>
