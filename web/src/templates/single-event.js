@@ -36,7 +36,8 @@ function SingleEvent({ data }) {
     <SingleBlogStyles>
       <SEO
         title={event.title}
-        images={event.coverImage.asset.gatsbyImageData}
+        images={event?.coverImage?.asset?.gatsbyImageData?.images?.fallback?.src
+        }
       />
       <PageSpace top={80} bottom={100}>
         <div className="container">

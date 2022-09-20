@@ -54,7 +54,10 @@ function SingleCategory({ data }) {
         <div className="container">
           <SEO
             title={category.title}
-            images={category.coverImage.asset.gatsbyImageData}
+            images={
+              category?.coverImage?.asset?.gatsbyImageData?.images?.fallback
+                ?.src
+            }
           />
           <PageHeader title={category.title} className="pageHeader">
             <MyPortableText values={category._rawDescription} />
