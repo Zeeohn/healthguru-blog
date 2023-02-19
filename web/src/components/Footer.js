@@ -40,7 +40,7 @@ function Footer() {
               Z-CODES
             </span>
           </a>
-          . All rights reserved @ {new Date().getFullYear()}.
+          . All rights reserved @ 2022-{new Date().getFullYear()}.
         </ParagraphText>
       </div>
     </FooterStyles>
